@@ -1,11 +1,7 @@
-from ingestion.loader import load_document
-from ingestion.chunker import chunk_document
+from retrieval.retriever import retrieve, format_results
 
-doc = load_document('data/sample_manuals/impractical_python_projects.pdf')
-print('Filename:', doc['filename'])
-print('Pages found:', doc['total_pages'])
+question = "Any exercises related to palingrams?"  # Example question to test retrieval
+print(f"Question: {question}\n")
 
-chunks = chunk_document(doc)
-print(f'Total chunks: {len(chunks)}')
-print(f'\nFirst chunk text:\n{chunks[0]["text"][:300]}')
-print(f'\nFirst chunk metadata: {chunks[0]["metadata"]}')
+results = retrieve(question)
+print(format_results(results))
