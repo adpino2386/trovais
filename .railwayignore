@@ -1,0 +1,13 @@
+data/
+__pycache__/
+*.pyc
+.env
+test_*.py
+debug_*.py
+check_db.py
+fix_*.py
+rebuild_index.py
+reset_and_reingest.py
+ingest_all.py
+re_ingest.py
+search_descale.py
