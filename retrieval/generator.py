@@ -6,7 +6,7 @@ from typing import List
 load_dotenv()
 
 claude = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
-MODEL = "claude-sonnet-4-20250514"
+MODEL = "claude-sonnet-4-6"
 
 SYSTEM_PROMPT = """You are Trovais, an expert knowledge assistant. 
 Your job is to answer questions accurately using ONLY the context 
